@@ -4,11 +4,11 @@ This is a starter kit for deploying a kuberentes cluster on digital ocean.
 
 ## Usage
 
-First export TF_VAR_do_token=[digital-ocean-access-token]
+First export `TF_VAR_do_token=[digital-ocean-access-token]`
 
 Then define your kubernetes cluster:
 
-```sh
+```hcl
 variable "do_token" {}
 
 module "digitalocean_kubernetes_cluster" {
