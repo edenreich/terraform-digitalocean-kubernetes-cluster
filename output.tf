@@ -19,7 +19,7 @@ output "cluster_client_certificate" {
   value       = "${digitalocean_kubernetes_cluster.*.kube_config.0.client_certificate}"
 }
 
-output "cluster_cluster_ca_certificate" {
+output "cluster_ca_certificate" {
   description = "Kubernetes CA certificate"
   value       = "${digitalocean_kubernetes_cluster.*.kube_config.0.cluster_ca_certificate}"
 }
