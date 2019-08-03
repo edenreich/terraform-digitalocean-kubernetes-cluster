@@ -20,3 +20,24 @@ module "digitalocean_kubernetes_cluster" {
   cluster_node_count = 2
 }
 ```
+
+## Further Information
+
+After the cluster is created the following variables are accessable for your own usage:
+
+```
+cluster_host
+cluster_ip
+cluster_client_key
+cluster_client_certificate
+cluster_ca_certificate
+```
+
+And you may access them with the following syntax:
+
+
+```hcl
+  "${module.digitalocean_kubernetes_cluster.[output]}"
+```
+
+Where `[output]` is one of the keys mentioned above.
