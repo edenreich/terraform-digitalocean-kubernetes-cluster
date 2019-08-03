@@ -31,6 +31,7 @@ cluster_ip
 cluster_client_key
 cluster_client_certificate
 cluster_ca_certificate
+cluster_raw_config
 ```
 
 And you may access them with the following syntax:

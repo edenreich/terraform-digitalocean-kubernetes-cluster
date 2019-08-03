@@ -10,16 +10,21 @@ output "cluster_ip" {
 }
 
 output "cluster_client_key" {
-  description = "Kubernetes Client Key"
+  description = "Kubernetes Cluster Client Key"
   value       = "${digitalocean_kubernetes_cluster.cluster.kube_config.0.client_key}"
 }
 
 output "cluster_client_certificate" {
-  description = "Kubernetes Client Certificate"
+  description = "Kubernetes Cluster Client Certificate"
   value       = "${digitalocean_kubernetes_cluster.cluster.kube_config.0.client_certificate}"
 }
 
 output "cluster_ca_certificate" {
-  description = "Kubernetes CA certificate"
+  description = "Kubernetes Cluster CA certificate"
   value       = "${digitalocean_kubernetes_cluster.cluster.kube_config.0.cluster_ca_certificate}"
+}
+
+output "cluster_raw_config" {
+  description = "Kubernetes Cluster Raw Config"
+  value       = "${digitalocean_kubernetes_cluster.cluster.kube_config.0.raw_config}"
 }
