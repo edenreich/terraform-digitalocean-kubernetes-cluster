@@ -6,9 +6,9 @@
 provider "kubernetes" {
   host = "${module.digitalocean_kubernetes_cluster.cluster_host}"
 
-  client_certificate     = "${base64decode(module.digitalocean_kubernetes_cluster.cluster_host.cluster_client_certificate)}"
-  client_key             = "${base64decode(module.digitalocean_kubernetes_cluster.cluster_host.cluster_client_key)}"
-  cluster_ca_certificate = "${base64decode(module.digitalocean_kubernetes_cluster.cluster_host.cluster_ca_certificate)}"
+  client_certificate     = "${base64decode(module.digitalocean_kubernetes_cluster.cluster_client_certificate)}"
+  client_key             = "${base64decode(module.digitalocean_kubernetes_cluster.cluster_client_key)}"
+  cluster_ca_certificate = "${base64decode(module.digitalocean_kubernetes_cluster.cluster_ca_certificate)}"
 }
 ```
 
