@@ -16,7 +16,7 @@ provider "kubernetes" {
 ```hcl
 module "digitalocean_kubernetes_cluster" {
   source             = "github.com/edenreich/terraform-digitalocean-kubernetes-cluster"
-  do_token           = "${var.do_token}"
+  do_access_token    = "${var.do_access_token}"
   do_region          = "fra1"
   cluster_name       = "test"
   cluster_node_size  = "s-1vcpu-2gb"
@@ -26,7 +26,7 @@ module "digitalocean_kubernetes_cluster" {
 
 ***variables.tf***
 ```hcl
-variable "do_token" {}
+variable "do_access_token" {}
 ```
 
 The creation of the cluster will take approximately up to 8min, so please be patient :)

@@ -1,5 +1,5 @@
 
-variable "do_token" {}
+variable "do_access_token" {}
 
 variable "cluster_name" {
   default = "k8s-test"
